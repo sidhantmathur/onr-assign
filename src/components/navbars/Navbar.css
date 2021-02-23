@@ -3,5 +3,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-content: space-between;
+}
+
+.navInfo {
+  display: flex;
+  flex-direction: row;
 }

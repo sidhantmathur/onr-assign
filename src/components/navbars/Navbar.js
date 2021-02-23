@@ -5,29 +5,29 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       <div>Diagnostic Tool</div>
-      <ul>
-        <li>
+      <div className='navInfo'>
+        <div>
           Logged in as General User
-        </li>
-        <li>
+        </div>
+        <div>
           |
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          |
-        </li>
-        <li>
-          |
-        </li>
-      </ul>
+        </div>
+        <div>
+          |A
+        </div>
+        <div>
+          |B
+        </div>
+        <div>
+          |C
+        </div>
+        <div>
+          |D
+        </div>
+        <div>
+          |E
+        </div>
+      </div>
     </div>
   )
 }
