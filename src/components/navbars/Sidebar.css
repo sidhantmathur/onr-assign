@@ -2,5 +2,4 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
 }

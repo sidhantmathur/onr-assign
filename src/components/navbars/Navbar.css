@@ -2,7 +2,6 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: lightcoral;
 }
 
 .navInfo {
