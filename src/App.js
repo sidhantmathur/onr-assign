@@ -8,20 +8,17 @@ function App() {
   return (
     <div className='app'>
       <div className='layout'>
-        <div className='item a'>
+        <div className='Sidebar'>
           <Sidebar />
         </div>
-        <div className='item b'>
+        <div className='Navbar'>
           <Navbar />
         </div>
-        <div className='item c'>
-          C
+        <div className='Header'>
+          Header
         </div>
-        <div className='item d'>
-          D
-        </div>
-        <div className='item e'>
-          E
+        <div className='Stats'>
+          Stats
         </div>
       </div>
     </div>
