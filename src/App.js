@@ -14,6 +14,9 @@ function App() {
         <div className='Navbar'>
           <Navbar />
         </div>
+        <div className="Spacer">
+          Spacer
+        </div>
         <div className='Header'>
           Header
         </div>

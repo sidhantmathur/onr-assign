@@ -13,14 +13,14 @@ body {
   gap: 0px 0px;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar Navbar Navbar Navbar Navbar"
-    "Sidebar Header Header Header Header Header Header Header"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats"
-    "Sidebar Stats Stats Stats Stats Stats Stats Stats";
+    "Sidebar Spacer Header Header Header Header Header Header"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats"
+    "Sidebar Spacer Stats Stats Stats Stats Stats Stats";
 }
 
 .Sidebar { 
@@ -38,4 +38,8 @@ body {
 }
 .Stats { 
   grid-area: Stats; 
+}
+
+.Spacer {
+  grid-area: Spacer;
 }
