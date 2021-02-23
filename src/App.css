@@ -1,4 +1,31 @@
 
 .layout {
   display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50px;
+}
+
+.a {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.b {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.c {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.d {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.e {
+  grid-column: auto;
+  grid-row: auto;
 }
