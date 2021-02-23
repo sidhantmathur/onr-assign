@@ -7,8 +7,10 @@ import Sidebar from './components/navbars/Sidebar'
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Sidebar />
+      <div className='layout'>
+        <Sidebar />
+        <Navbar />
+      </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
