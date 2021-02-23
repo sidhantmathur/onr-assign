@@ -1,8 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
 
 .layout {
   display: grid;
   grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar Navbar Navbar Navbar Navbar"
@@ -17,6 +24,7 @@
 }
 .Navbar { 
   grid-area: Navbar; 
+  padding: 10px;
 }
 .Header { 
   grid-area: Header; 
