@@ -6,10 +6,23 @@ import Sidebar from './components/navbars/Sidebar'
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <div className='layout'>
-        <Sidebar />
-        <Navbar />
+        <div className='item a'>
+          <Sidebar />
+        </div>
+        <div className='item b'>
+          <Navbar />
+        </div>
+        <div className='item c'>
+          C
+        </div>
+        <div className='item d'>
+          D
+        </div>
+        <div className='item e'>
+          E
+        </div>
       </div>
     </div>
   );
