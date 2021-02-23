@@ -1,0 +1,10 @@
+
+.stats-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.donut-list {
+  display: flex;
+  flex-wrap: wrap;
+}
