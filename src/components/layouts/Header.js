@@ -6,7 +6,6 @@ export default function Header() {
     <>
       <h1>Performance Management</h1>
       <h2>Diagnostic Tool</h2>
-
       <div className="subheader">
         <div className="filters">
           <p>Filters</p>

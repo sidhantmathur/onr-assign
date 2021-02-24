@@ -1,4 +1,8 @@
 
+h2 {
+  background-color: lightgray;
+}
+
 .subheader {
   display: flex;
   justify-content: space-between;
