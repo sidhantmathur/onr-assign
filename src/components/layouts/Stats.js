@@ -2,6 +2,7 @@ import React from 'react'
 
 import Chart from '../charts/Chart'
 import Area2 from '../charts/Area2'
+import Area3 from '../charts/Area3'
 import './Stats.css'
 
 export default function Stats() {
@@ -15,6 +16,7 @@ export default function Stats() {
 
       <div className='area-chart-space'>
         <Area2 />
+        <Area3 />
       </div>
 
     </div>
