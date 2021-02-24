@@ -7,6 +7,7 @@ import './Stats.css'
 
 import dataset from '../data/data.json'
 import Donut from '../charts/Donut'
+import Line from '../charts/Line'
 
 export default function Stats() {
 
@@ -19,6 +20,7 @@ export default function Stats() {
   const processGauge = dataset.gaugeData[4]
   const knowledgeGauge = dataset.gaugeData[5]
 
+  const areaData = dataset.areaData
 
   return (
     
@@ -37,6 +39,8 @@ export default function Stats() {
       <div className='area-chart-space'>
         {/* <Area2 /> */}
         {/* <Area3 /> */}
+
+        <Line data={areaData}/>
       </div>
 
     </div>
