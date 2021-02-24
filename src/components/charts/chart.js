@@ -6,6 +6,8 @@ function Chart(props) {
     data,
     outerRadius,
     innerRadius,
+    label,
+    sample
   } = props;
 
   const margin = {
@@ -26,13 +28,13 @@ function Chart(props) {
 
   function drawChart() {
     // Remove the old svg
-    d3.select('#pie-container')
+    d3.select('.pie-container')
       .select('svg')
       .remove();
 
     // Create new svg
     const svg = d3
-      .select('#pie-container')
+      .select('.pie-container')
       .append('svg')
       .attr('width', width)
       .attr('height', height)
@@ -63,19 +65,25 @@ function Chart(props) {
       .style('stroke-width', 0);
 
     // Append text labels
-    // arc
-    //   .append('text')
-    //   .attr('text-anchor', 'middle')
-    //   .attr('alignment-baseline', 'middle')
-    //   .text((d) => d.data.label)
-    //   // .style('fill', (_, i) => colorScale(data.length - i))
-    //   .attr('transform', (d) => {
-    //     const [x, y] = arcGenerator.centroid(d);
-    //     return `translate(${x}, ${y})`;
-    //   });
+    arc
+      .append('text')
+      .attr('text-anchor', 'middle')
+      .attr('alignment-baseline', 'middle')
+      .text((d) => d.data.label)
+      // .style('fill', (_, i) => colorScale(data.length - i))
+      .attr('transform', (d) => {
+        const [x, y] = arcGenerator.centroid(d);
+        return `translate(${x}, ${y})`;
+      });
   }    
 
-  return <div id="pie-container" />;
+  return (
+    <>
+      <p>{label}</p>
+      <div className="pie-container"></div>
+      <p>Sample: {sample}</p>
+    </>
+  )
 }
 
 export default Chart;

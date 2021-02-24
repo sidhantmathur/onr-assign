@@ -8,9 +8,9 @@ export default function Area3() {
     
   // }
 
-  console.log(dataset)
+  console.log(dataset.areaData["Quality Score"])
 
-  let data = dataset.gaugeData
+  let data = dataset.areaData["Quality Score"]
 
   return (
     <div>
