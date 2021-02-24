@@ -1,8 +1,8 @@
 import React from 'react'
 
 // import Chart from '../charts/Chart'
-import Area2 from '../charts/Area2'
-import Area3 from '../charts/Area3'
+// import Area2 from '../charts/Area2'
+// import Area3 from '../charts/Area3'
 import './Stats.css'
 
 import dataset from '../data/data.json'
@@ -19,12 +19,6 @@ export default function Stats() {
   const processGauge = dataset.gaugeData[4]
   const knowledgeGauge = dataset.gaugeData[5]
 
-  // console.log(qualityGauge)
-  // console.log(basicsGauge)
-  // console.log(interactionGauge)
-  // console.log(expertiseGauge)
-  // console.log(processGauge)
-  // console.log(knowledgeGauge)
 
   return (
     

@@ -8,3 +8,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.gbox {
+  border: 1px solid black;
+  padding: 15px;
+}
