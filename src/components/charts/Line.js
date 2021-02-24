@@ -19,9 +19,9 @@ export default function Line(props) {
   return (
     <div className="gbox">
       <button onClick={update}>Update</button>
-      <p>{data.name}</p>
-      <p>{data.score}</p>
-      <p>{data.sample}</p>
+      <p>{dataset[0].date}</p>
+      <p>{dataset[0].score}</p>
+      <p>{dataset[0].sample}</p>
     </div>
   )
 }
