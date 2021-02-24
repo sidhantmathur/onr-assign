@@ -8,8 +8,8 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 75px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar Navbar Navbar Navbar Navbar"
@@ -25,13 +25,15 @@ body {
 
 .Sidebar { 
   grid-area: Sidebar; 
-  background-color: lightblue;
+  background-color: darkslateblue;
+  color: white;
   height: 100vh;
 }
 .Navbar { 
   grid-area: Navbar; 
   padding: 10px;
-  background-color: lightcoral;
+  background-color: darkblue;
+  color: white;
 }
 .Header { 
   grid-area: Header; 

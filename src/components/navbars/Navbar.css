@@ -2,8 +2,16 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  align-content: flex-end;
 }
 
 .navInfo {
   display: flex;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 22pt;
+  margin-left: 40px;
 }

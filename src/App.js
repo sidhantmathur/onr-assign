@@ -4,6 +4,7 @@ import './App.css';
 import Stats from './components/layouts/Stats';
 import Navbar from './components/navbars/Navbar'
 import Sidebar from './components/navbars/Sidebar'
+import Header from './components/layouts/Header'
 
 function App() {
   return (
@@ -15,18 +16,14 @@ function App() {
         <div className='Navbar'>
           <Navbar />
         </div>
-        <div className="Spacer">
-          Spacer
-        </div>
+        <div className="Spacer"></div>
         <div className='Header'>
-          Header
+          <Header />
         </div>
         <div className='Stats'>
           <Stats />
         </div>
-        <div className="Spacer2">
-          Spacer2
-        </div>
+        <div className="Spacer2"></div>
       </div>
     </div>
   );

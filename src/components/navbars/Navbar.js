@@ -1,31 +1,33 @@
 import React from 'react';
 import './Navbar.css';
 
+import Coffee from '../icons/coffee'
+
 export default function Navbar() {
   return (
     <div className='navbar'>
-      <div>Diagnostic Tool</div>
+      <div className='brand'>Diagnostic Tool</div>
       <div className='navInfo'>
         <div>
-          Logged in as General User
+          Logged in as General User 
         </div>
-        <div>
+        <div style={{paddingLeft:'10px', paddingRight:'5px'}}>
           |
         </div>
-        <div>
-          |A
+        <div> 
+          <Coffee /> 
         </div>
-        <div>
-          |B
+        <div> 
+          <Coffee /> 
         </div>
-        <div>
-          |C
+        <div> 
+          <Coffee /> 
         </div>
-        <div>
-          |D
+        <div> 
+          <Coffee /> 
         </div>
-        <div>
-          |E
+        <div> 
+          <Coffee />
         </div>
       </div>
     </div>

@@ -63,16 +63,16 @@ function Chart(props) {
       .style('stroke-width', 0);
 
     // Append text labels
-    arc
-      .append('text')
-      .attr('text-anchor', 'middle')
-      .attr('alignment-baseline', 'middle')
-      .text((d) => d.data.label)
-      .style('fill', (_, i) => colorScale(data.length - i))
-      .attr('transform', (d) => {
-        const [x, y] = arcGenerator.centroid(d);
-        return `translate(${x}, ${y})`;
-      });
+    // arc
+    //   .append('text')
+    //   .attr('text-anchor', 'middle')
+    //   .attr('alignment-baseline', 'middle')
+    //   .text((d) => d.data.label)
+    //   // .style('fill', (_, i) => colorScale(data.length - i))
+    //   .attr('transform', (d) => {
+    //     const [x, y] = arcGenerator.centroid(d);
+    //     return `translate(${x}, ${y})`;
+    //   });
   }    
 
   return <div id="pie-container" />;
