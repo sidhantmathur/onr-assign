@@ -1,20 +1,14 @@
 import React from 'react'
-import Chart from '../charts/chart'
+import Chart from '../charts/Chart'
 import './Stats.css'
 
 export default function Stats() {
   return (
+    
     <div className='stats-layout'>
       
       <div className='donut-list'>
-        {/* <div>Quality Score</div>
-        <div>Basics</div>
-        <div>Interaction</div>
-        <div>Expertise</div>
-        <div>Process</div>
-        <div>Knowledge</div> */}
-
-        <Chart />
+          <Chart data={[{ label: 'Apples', value: 10 }, { label: 'Oranges', value: 20 }]} outerRadius={50} innerRadius={40}/>
       </div>
 
       <div className='area-chart-space'>
