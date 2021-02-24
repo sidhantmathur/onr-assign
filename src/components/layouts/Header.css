@@ -23,7 +23,9 @@
 }
 
 .qs-title {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 14pt;
+  margin-right: 30px;
 }
 
 .blueBox {
@@ -42,4 +44,14 @@
   display: inline-block;
   margin-right: 12px;
   margin-bottom: 3px;
+}
+
+.btn {
+  background-color: steelblue;
+  color: white;
+  margin-right: 3px;
+  margin-left: 3px;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
 }

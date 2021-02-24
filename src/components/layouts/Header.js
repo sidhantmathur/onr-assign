@@ -19,12 +19,12 @@ export default function Header() {
         <div className='quality-score'>
           <div className='qs-title'>Quality Score Trend</div>
           <div>
-            <button>Day</button>
-            <button>Week</button>
-            <button>Month</button>
-            <button>Quarter</button>
-            <button>Half</button>
-            <button>Year</button>
+            <button className='btn'>Day</button>
+            <button className='btn'>Week</button>
+            <button className='btn'>Month</button>
+            <button className='btn'>Quarter</button>
+            <button className='btn'>Half</button>
+            <button className='btn'>Year</button>
           </div>
         </div>
       </div>
