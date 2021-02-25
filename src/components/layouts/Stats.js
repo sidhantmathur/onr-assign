@@ -19,7 +19,7 @@ export default function Stats() {
   const areaData = dataset.areaData
 
   return (
-    
+    <>
     <div className='stats-layout'>
       
       <div className='donut-list'>
@@ -36,5 +36,6 @@ export default function Stats() {
       </div>
 
     </div>
+    </>
   )
 }

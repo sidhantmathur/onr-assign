@@ -23,6 +23,7 @@ export default function LineChart(props) {
   // console.log(qs, ba, ex, it, kn, pr)
 
   const [dataset, setDataset] = useState( [qs[0].score, qs[1].score, qs[2].score, qs[3].score ] )
+  const [dataname, setDataName] = useState("Quality Score")
 
   // console.log(dataset)
 
@@ -48,7 +49,7 @@ export default function LineChart(props) {
       
     const myArea = area()
       .x((value, index) => xScale(index))
-      .y0(100)
+      .y0(0)
       .y(yScale)
       .curve(curveCardinal);
 
@@ -81,36 +82,46 @@ export default function LineChart(props) {
   const basic = () => {
     const newData = [ba[0].score, ba[1].score, ba[2].score, ba[3].score ]
     setDataset(newData)
+    setDataName("Basic")
   }
 
   const exper = () => {
     const newData = [ex[0].score, ex[1].score, ex[2].score, ex[3].score ]
     setDataset(newData)
+    setDataName("Expertise")
   }
 
   const inter = () => {
     const newData = [it[0].score, it[1].score, it[2].score, it[3].score ]
     setDataset(newData)
+    setDataName("Interactivity")
   }
 
   const knowl = () => {
     const newData = [kn[0].score, kn[1].score, kn[2].score, kn[3].score ]
     setDataset(newData)
+    setDataName("Knowledge")
   }
 
   const proce = () => {
     const newData = [pr[0].score, pr[1].score, pr[2].score, pr[3].score ]
     setDataset(newData)
+    setDataName("Process")
   }
 
   const quali = () => {
     const newData = [qs[0].score, qs[1].score, qs[2].score, qs[3].score ]
     setDataset(newData)
+    setDataName("Quality Score")
   }
 
   return (
     <>
+    {console.log(dataset)}
     <div className="gbox">
+
+      <p>{dataname}</p>
+
       <button onClick={quali}>Quality Score</button>
       <button onClick={proce}>Process</button>
       <button onClick={knowl}>Knowledge</button>

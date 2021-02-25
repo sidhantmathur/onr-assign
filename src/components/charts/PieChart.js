@@ -21,13 +21,13 @@ function PieChart({ data }) {
       .value(d => d.score)
       .sort(null); 
 
-    const instructions = pieGenerator(data);
+    const dataset = pieGenerator(data);
 
     const colorScale = scaleOrdinal(schemeBlues[3]);
 
     svg
       .selectAll(".slice")
-      .data(instructions)
+      .data(dataset)
       .join("path")
       .attr("class", "slice")
       .attr("fill", (d, i) => colorScale(i))
