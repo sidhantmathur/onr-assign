@@ -4,7 +4,7 @@ import './Pie.css'
 
 function PieChart({ data }) {
 
-  console.log(data)
+  // console.log(data)
 
   const svgRef = useRef();
 

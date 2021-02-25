@@ -5,7 +5,7 @@ export default function Pie2(props) {
 
   const { data, name, score } = props
 
-  console.log(data, name, score)
+  // console.log(data, name, score)
 
   const svgRef = useRef();
   const wrapperRef = useRef();

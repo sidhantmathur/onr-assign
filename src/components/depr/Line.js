@@ -16,7 +16,7 @@ export default function Line(props) {
     setDataset(newData)
   }
 
-  console.log(dataset)
+  // console.log(dataset)
 
   return (
     <div className="gbox">

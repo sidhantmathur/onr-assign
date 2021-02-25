@@ -8,7 +8,7 @@ function Pie({ data }) {
   const height = 300
   const width = 1500
 
-  console.log(data)
+  // console.log(data)
 
   // will be called initially and on every data change
   useEffect(() => {

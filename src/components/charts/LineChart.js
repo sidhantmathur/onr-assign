@@ -17,11 +17,11 @@ export default function LineChart(props) {
   const kn = data["Knowledge"]
   const pr = data["Process"]
 
-  console.log(qs, ba, ex, it, kn, pr)
+  // console.log(qs, ba, ex, it, kn, pr)
 
   const [dataset, setDataset] = useState( [qs[0].score, qs[1].score, qs[2].score, qs[3].score ] )
 
-  console.log(dataset)
+  // console.log(dataset)
 
   const svgRef = useRef();
 

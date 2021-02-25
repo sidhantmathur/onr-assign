@@ -8,7 +8,7 @@ export default function Area3() {
     
   // }
 
-  console.log(dataset.areaData["Quality Score"])
+  // console.log(dataset.areaData["Quality Score"])
 
   let data = dataset.areaData["Quality Score"]
 
