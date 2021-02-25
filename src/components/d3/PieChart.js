@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { arc, interpolate, pie, scaleOrdinal, schemeGreens, select } from "d3";
+import { arc, interpolate, pie, scaleOrdinal, schemeBlues, select } from "d3";
 import './Pie.css'
 
 function PieChart({ data }) {
@@ -30,7 +30,7 @@ function PieChart({ data }) {
 
     // generate colorScale
     // https://github.com/d3/d3-scale-chromatic
-    const colorScale = scaleOrdinal(schemeGreens[3]);
+    const colorScale = scaleOrdinal(schemeBlues[3]);
 
     // render slices (instructions)
     svg
@@ -55,8 +55,10 @@ function PieChart({ data }) {
   }, [data]);
 
   return (
-    <div>
-      <svg ref={svgRef}></svg>
+    <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
+      <p style={{ position: 'absolute', marginTop: '40px' }}>{data[0].score}%</p>
+      <svg ref={svgRef}>
+      </svg>
     </div>
   );
 }
