@@ -9,6 +9,8 @@ import dataset from '../data/data.json'
 import Donut from '../charts/Donut'
 import Line from '../charts/Line'
 
+import Line2 from '../d3/Line'
+
 export default function Stats() {
 
   // const parsedData = JSON.parse(dataset)
@@ -41,6 +43,8 @@ export default function Stats() {
         {/* <Area3 /> */}
 
         <Line data={areaData}/>
+
+        <Line2 />
       </div>
 
     </div>
