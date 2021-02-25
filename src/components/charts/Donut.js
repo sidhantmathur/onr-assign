@@ -5,6 +5,8 @@ export default function Donut(props) {
 
   const { data } = props
 
+  // console.log(data)
+
   return (
     <div className="gbox">
       <p>{data.name}</p>

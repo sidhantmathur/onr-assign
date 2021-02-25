@@ -111,7 +111,6 @@ export default function Line(props) {
       <p>{dataset[0].date}</p>
       <p>{dataset[0].score}</p>
       <p>{dataset[0].sample}</p>
-    </div>
 
     <svg style={{overflow: 'visible'}} ref={svgRef}>
         <g className="x-axis" />
@@ -121,6 +120,7 @@ export default function Line(props) {
       <br />
       <br />
       <br />
+    </div>
     </>
   )
 }

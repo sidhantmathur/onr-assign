@@ -1,14 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import { arc, interpolate, pie, scaleOrdinal, schemeGreens, select } from "d3";
 
-function Pie({ data }) {
+export default function Pie2(props) {
+
+  const { data, name, score } = props
+
+  console.log(data, name, score)
+
   const svgRef = useRef();
   const wrapperRef = useRef();
 
   const height = 300
   const width = 1500
 
-  console.log(data)
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -57,7 +61,5 @@ function Pie({ data }) {
     <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
       <svg ref={svgRef}></svg>
     </div>
-  );
+  )
 }
-
-export default Pie;

@@ -1,14 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { arc, interpolate, pie, scaleOrdinal, schemeGreens, select } from "d3";
 
-function Pie({ data }) {
+function PieChart({ data }) {
+
+  console.log(data)
+
   const svgRef = useRef();
   const wrapperRef = useRef();
 
-  const height = 300
-  const width = 1500
-
-  console.log(data)
+  const height = 200
+  const width = 250
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -16,8 +17,8 @@ function Pie({ data }) {
     // arc takes instructions (objects with special properties, like startAngle, endAngle, etc.)
     // and transforms them into "d" attributes for path elements
     const arcGenerator = arc()
-      .innerRadius(120)
-      .outerRadius(150);
+      .innerRadius(90)
+      .outerRadius(100);
 
     // pie will transform data to instructions for arcGenerator
     const pieGenerator = pie()
@@ -43,7 +44,7 @@ function Pie({ data }) {
         `translate(${width / 2}px, ${height / 2}px)`
       )
       .transition()
-      .attrTween("d", function(nextInstruction, index) {
+      .attrTween("d", function(nextInstruction) {
         // animation when changing data
         const interpolator = interpolate(this.lastInstruction, nextInstruction);
         this.lastInstruction = interpolator(1);
@@ -60,4 +61,4 @@ function Pie({ data }) {
   );
 }
 
-export default Pie;
+export default PieChart;

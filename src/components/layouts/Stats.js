@@ -6,8 +6,11 @@ import React from 'react'
 import './Stats.css'
 
 import dataset from '../data/data.json'
-import Donut from '../charts/Donut'
 import Lin3 from '../charts/Lin3'
+// import Pie from '../d3/Pie'
+// import Pie2 from '../d3/Pie2'
+
+import PieMiddleware from '../d3/PieMiddleware'
 
 // import Line2 from '../d3/Line'
 
@@ -30,12 +33,14 @@ export default function Stats() {
       
       <div className='donut-list'>
         {/* <Chart sample={12} label={"Quality Score"} data={[{ label: 'Apples', value: 10 }, { label: 'Oranges', value: 20 }]} outerRadius={50} innerRadius={40}/ */}
-        <Donut data={qualityGauge}/>
-        <Donut data={basicsGauge}/>
-        <Donut data={interactionGauge}/>
-        <Donut data={expertiseGauge}/>
-        <Donut data={processGauge}/>
-        <Donut data={knowledgeGauge}/>
+        {/* <Pie data={knowledgeGauge} /> */}
+        {/* <Pie2 data= {knowledgeGauge} score={knowledgeGauge.score} name={knowledgeGauge.name} /> */}
+        <PieMiddleware preData={qualityGauge}/>
+        <PieMiddleware preData={basicsGauge}/>
+        <PieMiddleware preData={interactionGauge}/>
+        <PieMiddleware preData={expertiseGauge}/>
+        <PieMiddleware preData={processGauge}/>
+        <PieMiddleware preData={knowledgeGauge}/>
       </div>
 
       <div className='area-chart-space'>
