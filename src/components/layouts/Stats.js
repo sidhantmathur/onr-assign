@@ -25,45 +25,9 @@ export default function Stats() {
   // const kn = areaData["Knowledge"]
   // const pr = areaData["Process"]
 
-  // const [category, setCategory] = useState("Quality Score")
-
   const [selectedData, setSelectedData] = useState(qs)
 
   console.log(areaData[selectedData])
-
-  // function changeCategory (newCategory) {
-  //   setCategory(newCategory)
-  //   console.log(newCategory)
-  // }
-
-  // function changeToQuality () {
-  //   setCategory("Quality Score")
-  //   console.log('changed to Quality', category)
-  // }
-  // function changeToBasics () {
-  //   setCategory("Basics")
-  //   console.log('changed to basics', category)
-  // }
-  // function changeToInteraction () {
-  //   setCategory("Interaction")
-  //   console.log('changed to interaction', category)
-  // }
-  // function changeToExpertise () {
-  //   setCategory("Expertise")
-  //   console.log('changed to expertise', category)
-  // }
-  // function changeToProcess () {
-  //   setCategory("Process")
-  //   console.log('changed to process', category)
-  // }
-  // function changeToKnowledge () {
-  //   setCategory("Knowledge Score")
-  //   console.log('changed to knowledge', category)
-  // }
-
-  // handleClick(e) {
-  //   {setState({ category: "Basics" })
-  // }
 
   return (
     <>
@@ -87,25 +51,7 @@ export default function Stats() {
           /> : 'Click a Donut'
           }
       </div>
-
     </div>
     </>
   )
 }
-
-
-        //   data={areaData}
-
-        //   selectedData={selectedData}
-
-        //   qs={qs}
-
-        //   // category={category}
-
-        //   // changeCategory={changeCategory}
-        //   // changeToQuality={changeToQuality}
-        //   // changeToBasics={changeToBasics}
-        //   // changeToKnowledge={changeToKnowledge} 
-        //   // changeToProcess={changeToProcess} 
-        //   // changeToExpertise={changeToExpertise} 
-        //   // changeToInteraction={changeToInteraction} 
