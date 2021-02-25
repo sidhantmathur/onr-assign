@@ -1,8 +1,8 @@
 import React from 'react'
 import './Stats.css'
-import dataset from '../data/data.json'
-import LineChart from '../charts/LineChart'
-import PieMiddleware from '../charts/PieMiddleware'
+import dataset from '../../data/data.json'
+import LineChart from '../../charts/LineChart'
+import PieMiddleware from '../../charts/PieMiddleware'
 
 import DataContext from './DataContext'
 
