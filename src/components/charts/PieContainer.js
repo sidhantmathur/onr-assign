@@ -2,7 +2,7 @@ import React from "react";
 import PieChart from './PieChart'
 import './Pie.css'
 
-function PieMiddleware({ preData, setSelectedData }) {
+function PieContainer({ preData, setSelectedData }) {
   
   const arrayPre = [preData]
   const remainderSub = preData.score
@@ -31,4 +31,4 @@ function PieMiddleware({ preData, setSelectedData }) {
   );
 }
 
-export default PieMiddleware;
+export default PieContainer;

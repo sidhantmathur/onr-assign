@@ -5,7 +5,7 @@ import './Stats.css'
 import dataset from '../data/data.json'
 import LineChart from '../charts/LineChart'
 
-import PieMiddleware from '../charts/PieMiddleware'
+import PieContainer from '../charts/PieContainer'
 
 export default function Stats() {
 
@@ -42,12 +42,12 @@ export default function Stats() {
             </div>
         </div>
         <div className='donut-list'>
-          <PieMiddleware setSelectedData={setSelectedData} preData={qualityGauge}/>
-          <PieMiddleware setSelectedData={setSelectedData} preData={basicsGauge}/>
-          <PieMiddleware setSelectedData={setSelectedData} preData={interactionGauge}/>
-          <PieMiddleware setSelectedData={setSelectedData} preData={expertiseGauge}/>
-          <PieMiddleware setSelectedData={setSelectedData} preData={processGauge}/>
-          <PieMiddleware setSelectedData={setSelectedData} preData={knowledgeGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={qualityGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={basicsGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={interactionGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={expertiseGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={processGauge}/>
+          <PieContainer setSelectedData={setSelectedData} selectedData={selectedData} preData={knowledgeGauge}/>
         </div>
       </div>
 

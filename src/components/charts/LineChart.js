@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import { select,
-  line,
   area,
   curveCardinal,
   axisBottom,
@@ -56,8 +55,8 @@ export default function LineChart(props) {
       .join("path")
       .attr("class", "area")
       .attr("d", myArea)
-      .attr("fill", "blue")
-      .attr("stroke", "blue");
+      .attr("fill", "lightblue")
+      .attr("stroke", "lightblue");
 
   }, [dataset]);
 
