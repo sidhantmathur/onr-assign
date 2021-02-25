@@ -1,5 +1,7 @@
 import React from "react";
 import PieChart from './PieChart'
+import './Pie.css'
+
 function PieMiddleware({ preData }) {
   
   const arrayPre = [preData]
@@ -15,7 +17,11 @@ function PieMiddleware({ preData }) {
   const data = arrayPre
 
   return (
-    <PieChart data={data} />
+    <div className="gbox">
+      <p>{data[0].name}</p>
+        <PieChart data={data} />
+      <p>{data[0].sample}</p>
+    </div>
   );
 }
 

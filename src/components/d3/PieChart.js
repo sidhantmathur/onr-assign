@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { arc, interpolate, pie, scaleOrdinal, schemeGreens, select } from "d3";
+import './Pie.css'
 
 function PieChart({ data }) {
 
   console.log(data)
 
   const svgRef = useRef();
-  const wrapperRef = useRef();
 
-  const height = 200
-  const width = 250
+  const height = 50
+  const width = 50
 
   // will be called initially and on every data change
   useEffect(() => {
@@ -17,8 +17,8 @@ function PieChart({ data }) {
     // arc takes instructions (objects with special properties, like startAngle, endAngle, etc.)
     // and transforms them into "d" attributes for path elements
     const arcGenerator = arc()
-      .innerRadius(90)
-      .outerRadius(100);
+      .innerRadius(45)
+      .outerRadius(50);
 
     // pie will transform data to instructions for arcGenerator
     const pieGenerator = pie()
@@ -41,7 +41,7 @@ function PieChart({ data }) {
       .attr("fill", (d, i) => colorScale(i))
       .style(
         "transform",
-        `translate(${width / 2}px, ${height / 2}px)`
+        `translate(${width}px, ${height}px)`
       )
       .transition()
       .attrTween("d", function(nextInstruction) {
@@ -55,7 +55,7 @@ function PieChart({ data }) {
   }, [data]);
 
   return (
-    <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+    <div>
       <svg ref={svgRef}></svg>
     </div>
   );
