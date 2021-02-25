@@ -2,7 +2,7 @@ import React from "react";
 import PieChart from './PieChart'
 import './Pie.css'
 
-function PieMiddleware({ preData }) {
+function PieMiddleware({ preData, setSelectedData }) {
   
   const arrayPre = [preData]
   const remainderSub = preData.score
@@ -15,12 +15,18 @@ function PieMiddleware({ preData }) {
   arrayPre.push(remainder)
 
   const data = arrayPre
+  
+  const onButtonClick = (data) => {
+    setSelectedData(data)
+    console.log(data);
+  }
 
   return (
     <div className="gbox">
       <p>{data[0].name}</p>
         <PieChart data={data} />
       <p style={{color: 'black'}}>Sample: {data[0].sample}</p>
+      <button onClick={() => onButtonClick(data[0].name)}>{data[0].name}</button>
     </div>
   );
 }
