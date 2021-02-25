@@ -18,10 +18,14 @@ export default function Stats() {
 
   const areaData = dataset.areaData
 
+  // handleClick(e) {
+  //   this.setState({ category: "Basics" })
+  // }
+
   return (
     <>
     <div className='stats-layout'>
-      
+
       <div className='donut-list'>
         <PieMiddleware preData={qualityGauge}/>
         <PieMiddleware preData={basicsGauge}/>

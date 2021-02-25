@@ -9,6 +9,8 @@ import { select,
 
 import './LineChart.css'
 
+// import DataContextConsumer from '../restructure/DataContext'
+
 export default function LineChart(props) {
 
   const { data } = props
@@ -31,7 +33,13 @@ export default function LineChart(props) {
 
   useEffect(() => {
     const svg = select(svgRef.current);
+
+    // let initCheck = data["Quality Score"].map(d => d.date)
+
+    // console.log(initCheck)
+
     const xScale = scaleLinear()
+      // .domain(data["Quality Score"].map(d => d.date))
       .domain([0, dataset.length - 1])
       .range([0, 300]);
 
@@ -59,14 +67,14 @@ export default function LineChart(props) {
       .curve(curveCardinal);
     
 
-    svg
-      .selectAll(".line")
-      .data([dataset])
-      .join("path")
-      .attr("class", "line")
-      .attr("d", myLine)
-      .attr("fill", "green")
-      .attr("stroke", "blue");
+    // svg
+    //   .selectAll(".line")
+    //   .data([dataset])
+    //   .join("path")
+    //   .attr("class", "line")
+    //   .attr("d", myLine)
+    //   // .attr("fill", "blue")
+    //   // .attr("stroke", "black");
 
     svg
       .selectAll(".area")
@@ -75,7 +83,7 @@ export default function LineChart(props) {
       .attr("class", "area")
       .attr("d", myArea)
       .attr("fill", "red")
-      .attr("stroke", "blue");
+      .attr("stroke", "green");
 
   }, [dataset]);
 
