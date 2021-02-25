@@ -7,7 +7,7 @@ import './Stats.css'
 
 import dataset from '../data/data.json'
 import Donut from '../charts/Donut'
-import Line from '../charts/Line'
+import Lin3 from '../charts/Lin3'
 
 import Line2 from '../d3/Line'
 
@@ -42,9 +42,9 @@ export default function Stats() {
         {/* <Area2 /> */}
         {/* <Area3 /> */}
 
-        <Line data={areaData}/>
+        <Lin3 data={areaData}/>
 
-        <Line2 />
+        {/* <Line2 /> */}
       </div>
 
     </div>
