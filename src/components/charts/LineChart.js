@@ -32,15 +32,15 @@ export default function LineChart(props) {
       .range([0, 600]);
 
     const yScale = scaleLinear()
-      .domain([0, 100])
-      .range([100, 0]);
+      .domain([0, 300])
+      .range([300, 0]);
 
     const xAxis = axisBottom(xScale)
       .ticks(dataset.length)
       .tickFormat(index => index + 1);
     svg
       .select(".x-axis")
-      .style("transform", "translateY(150px)")
+      .style("transform", "translateY(450px)")
       .call(xAxis);
       
     const myArea = area()
@@ -62,15 +62,15 @@ export default function LineChart(props) {
 
   return (
     <>
-    <div>
-
       <p>{selectedData}</p>
+      {/* <p>{data[selectedData][0].date} - {data[selectedData][0].score}</p>
+      <p>{data[selectedData][1].date} - {data[selectedData][1].score}</p>
+      <p>{data[selectedData][2].date} - {data[selectedData][2].score}</p>
+      <p>{data[selectedData][3].date} - {data[selectedData][3].score}</p> */}
 
       <svg style={{overflow: 'visible', marginTop: '20px'}} ref={svgRef}>
         <g className="x-axis" />
       </svg>
-      
-    </div>
     </>
   )
 }

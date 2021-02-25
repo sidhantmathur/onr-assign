@@ -61,6 +61,7 @@ export default function Stats() {
               <button className='btn'>Half</button>
               <button className='btn'>Year</button>
             </div>
+            <br></br>
           <div>
               { areaData[selectedData] ? 
                 <LineChart 

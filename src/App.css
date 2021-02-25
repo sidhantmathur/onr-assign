@@ -8,15 +8,12 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 60px 1fr 1fr 1fr 1fr;
+  grid-template-columns: 60px 1fr 1fr 1fr;
+  grid-template-rows: 8vh 90vh;
   gap: 0px 0px;
   grid-template-areas:
-    "Sidebar Navbar Navbar Navbar Navbar Navbar Navbar Navbar"
-    /* "Sidebar Spacer Header Header Header Header Header Spacer2" */
-    "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2"
-    "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2"
-    "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2";
+    "Sidebar Navbar Navbar Navbar"
+    "Sidebar Stats Stats Stats";
 }
 
 .Sidebar { 
@@ -36,12 +33,4 @@ body {
 }
 .Stats { 
   grid-area: Stats; 
-}
-
-.Spacer {
-  grid-area: Spacer;
-}
-
-.Spacer2 {
-  grid-area: Spacer2;
 }
