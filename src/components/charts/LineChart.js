@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import { select,
   line,
+  area,
   curveCardinal,
   axisBottom,
   scaleLinear } from 'd3';
@@ -32,8 +33,8 @@ export default function LineChart(props) {
       .range([0, 300]);
 
     const yScale = scaleLinear()
-      .domain([0, 150])
-      .range([150, 0]);
+      .domain([0, 100])
+      .range([100, 0]);
 
     const xAxis = axisBottom(xScale)
       .ticks(dataset.length)
