@@ -31,7 +31,7 @@ export default function Stats() {
         <PieMiddleware preData={knowledgeGauge}/>
       </div>
 
-      <div className='area-chart-space'>
+      <div>
         <LineChart data={areaData}/>
       </div>
 

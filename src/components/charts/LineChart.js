@@ -7,6 +7,8 @@ import { select,
   axisBottom,
   scaleLinear } from 'd3';
 
+import './LineChart.css'
+
 export default function LineChart(props) {
 
   const { data } = props
@@ -43,11 +45,18 @@ export default function LineChart(props) {
       .select(".x-axis")
       .style("transform", "translateY(150px)")
       .call(xAxis);
+      
+    const myArea = area()
+      .x((value, index) => xScale(index))
+      .y0(100)
+      .y(yScale)
+      .curve(curveCardinal);
 
     const myLine = line()
       .x((value, index) => xScale(index))
       .y(yScale)
       .curve(curveCardinal);
+    
 
     svg
       .selectAll(".line")
@@ -55,8 +64,18 @@ export default function LineChart(props) {
       .join("path")
       .attr("class", "line")
       .attr("d", myLine)
-      .attr("fill", "none")
+      .attr("fill", "green")
       .attr("stroke", "blue");
+
+    svg
+      .selectAll(".area")
+      .data([dataset])
+      .join("path")
+      .attr("class", "area")
+      .attr("d", myArea)
+      .attr("fill", "red")
+      .attr("stroke", "blue");
+
   }, [dataset]);
 
   const basic = () => {
