@@ -16,6 +16,8 @@ export default function LineChart(props) {
   const dataset = [ data[selectedData][0].score, data[selectedData][1].score, data[selectedData][2].score, data[selectedData][3].score ]
   const [dataname, setDataName] = useState(dataset.name)
 
+  console.log(data, dataset, dataname)
+
   const svgRef = useRef();
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export default function LineChart(props) {
     const xScale = scaleLinear()
       // .domain(data["Quality Score"].map(d => d.date))
       .domain([0, dataset.length - 1])
-      .range([0, 300]);
+      .range([0, 600]);
 
     const yScale = scaleLinear()
       .domain([0, 100])
@@ -48,44 +50,27 @@ export default function LineChart(props) {
       .y(yScale)
       .curve(curveCardinal);
 
-    const myLine = line()
-      .x((value, index) => xScale(index))
-      .y(yScale)
-      .curve(curveCardinal);
-    
-    // svg
-    //   .selectAll(".line")
-    //   .data([dataset])
-    //   .join("path")
-    //   .attr("class", "line")
-    //   .attr("d", myLine)
-    //   // .attr("fill", "blue")
-    //   // .attr("stroke", "black");
-
     svg
       .selectAll(".area")
       .data([dataset])
       .join("path")
       .attr("class", "area")
       .attr("d", myArea)
-      .attr("fill", "red")
-      .attr("stroke", "green");
+      .attr("fill", "blue")
+      .attr("stroke", "blue");
 
   }, [dataset]);
 
   return (
     <>
-    <div className="gbox">
+    <div>
 
-      <p>{dataname}</p>
+      <p>{selectedData}</p>
 
-      <p>{data[selectedData][0].date}</p>
-      <p>{data[selectedData][0].score}</p>
-      <p>{data[selectedData][0].sample}</p>
-
-    <svg style={{overflow: 'visible'}} ref={svgRef}>
+      <svg style={{overflow: 'visible', marginTop: '20px'}} ref={svgRef}>
         <g className="x-axis" />
       </svg>
+      
     </div>
     </>
   )

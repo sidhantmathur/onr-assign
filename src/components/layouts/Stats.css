@@ -1,7 +1,7 @@
 
 .stats-layout {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .donut-list {
@@ -13,4 +13,78 @@
   border: 1px solid lightgray;
   padding: 15px;
   margin: 12px 24px 0px 0px;
+  border-radius: 8px;
+}
+
+
+h2 {
+  background-color: lightgray;
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters p {
+  font-weight: bold;
+  margin-block-end: 8px;
+}
+
+.filter-box {
+  border: solid 1px lightgray;
+  padding: 12px;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.filter-box div {
+  padding-bottom: 10px;
+}
+
+.quality-score {
+  /* display: flex; */
+  margin-top: 80px;
+}
+
+.qs-title {
+  text-transform: uppercase;
+  font-size: 14pt;
+  margin-right: 30px;
+}
+
+.blueBox {
+  height: 8px;
+  width: 8px;
+  background-color: blue;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 3px;
+}
+
+.greyBox {
+  height: 8px;
+  width: 8px;
+  background-color: grey;
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 3px;
+}
+
+.btn {
+  background-color: steelblue;
+  color: white;
+  margin-right: 3px;
+  margin-left: 3px;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.col-1 {
+  max-width: 600px;
+}
+
+.col-2 {
+  width: 600px;
 }

@@ -32,24 +32,45 @@ export default function Stats() {
   return (
     <>
     <div className='stats-layout'>
-
-      <div className='donut-list'>
-        <PieMiddleware setSelectedData={setSelectedData} preData={qualityGauge}/>
-        <PieMiddleware setSelectedData={setSelectedData} preData={basicsGauge}/>
-        <PieMiddleware setSelectedData={setSelectedData} preData={interactionGauge}/>
-        <PieMiddleware setSelectedData={setSelectedData} preData={expertiseGauge}/>
-        <PieMiddleware setSelectedData={setSelectedData} preData={processGauge}/>
-        <PieMiddleware setSelectedData={setSelectedData} preData={knowledgeGauge}/>
+      <div className="col-1">
+        <div className="filters">
+          <h1>Performance Management</h1>
+            <p>Filters</p>
+            <div className="filter-box">
+              <div><div className="blueBox"></div>All CQA Results</div>
+              <div><div className="greyBox"></div>CQAs with Closed Loop</div>
+            </div>
+        </div>
+        <div className='donut-list'>
+          <PieMiddleware setSelectedData={setSelectedData} preData={qualityGauge}/>
+          <PieMiddleware setSelectedData={setSelectedData} preData={basicsGauge}/>
+          <PieMiddleware setSelectedData={setSelectedData} preData={interactionGauge}/>
+          <PieMiddleware setSelectedData={setSelectedData} preData={expertiseGauge}/>
+          <PieMiddleware setSelectedData={setSelectedData} preData={processGauge}/>
+          <PieMiddleware setSelectedData={setSelectedData} preData={knowledgeGauge}/>
+        </div>
       </div>
 
-      <div>
-          { areaData[selectedData] ? 
-            <LineChart 
-            data={areaData}
-            selectedData={selectedData}
-            qs={qs}
-          /> : 'Click a Donut'
-          }
+      <div className="col-2">
+        <div className='quality-score'>
+            <div>
+              <button className='btn'>Day</button>
+              <button className='btn'>Week</button>
+              <button className='btn'>Month</button>
+              <button className='btn'>Quarter</button>
+              <button className='btn'>Half</button>
+              <button className='btn'>Year</button>
+            </div>
+          <div>
+              { areaData[selectedData] ? 
+                <LineChart 
+                data={areaData}
+                selectedData={selectedData}
+                qs={qs}
+              /> : 'Click a Donut'
+              }
+          </div>
+        </div>
       </div>
     </div>
     </>

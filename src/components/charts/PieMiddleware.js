@@ -22,11 +22,11 @@ function PieMiddleware({ preData, setSelectedData }) {
   }
 
   return (
-    <div className="gbox">
+    <div className="gbox" onClick={() => onButtonClick(data[0].name)}>
       <p>{data[0].name}</p>
         <PieChart data={data} />
       <p style={{color: 'black'}}>Sample: {data[0].sample}</p>
-      <button onClick={() => onButtonClick(data[0].name)}>{data[0].name}</button>
+      {/* <button onClick={() => onButtonClick(data[0].name)}>{data[0].name}</button> */}
     </div>
   );
 }

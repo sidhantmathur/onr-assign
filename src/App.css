@@ -13,7 +13,7 @@ body {
   gap: 0px 0px;
   grid-template-areas:
     "Sidebar Navbar Navbar Navbar Navbar Navbar Navbar Navbar"
-    "Sidebar Spacer Header Header Header Header Header Spacer2"
+    /* "Sidebar Spacer Header Header Header Header Header Spacer2" */
     "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2"
     "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2"
     "Sidebar Spacer Stats Stats Stats Stats Stats Spacer2";
