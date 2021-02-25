@@ -7,3 +7,7 @@ p {
   text-align: center;
   color:steelblue;
 }
+
+.selected {
+  background-color: lightblue;
+}
