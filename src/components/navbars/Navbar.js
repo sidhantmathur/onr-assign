@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css';
 
 import Coffee from '../icons/coffee'
+import Anchor from '../icons/anchor'
 
 export default function Navbar() {
   return (
@@ -18,13 +19,13 @@ export default function Navbar() {
           <Coffee /> 
         </div>
         <div> 
-          <Coffee /> 
+          <Anchor /> 
         </div>
         <div> 
           <Coffee /> 
         </div>
         <div> 
-          <Coffee /> 
+          <Anchor /> 
         </div>
         <div> 
           <Coffee />
