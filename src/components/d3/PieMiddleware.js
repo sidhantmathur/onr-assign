@@ -20,7 +20,7 @@ function PieMiddleware({ preData }) {
     <div className="gbox">
       <p>{data[0].name}</p>
         <PieChart data={data} />
-      <p>{data[0].sample}</p>
+      <p style={{color: 'black'}}>Sample: {data[0].sample}</p>
     </div>
   );
 }
