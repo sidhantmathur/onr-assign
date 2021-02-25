@@ -4,10 +4,9 @@ import { select,
   line,
   curveCardinal,
   axisBottom,
-  // axisRight,
   scaleLinear } from 'd3';
 
-export default function Line(props) {
+export default function LineChart(props) {
 
   const { data } = props
 
@@ -44,20 +43,11 @@ export default function Line(props) {
       .style("transform", "translateY(150px)")
       .call(xAxis);
 
-    // const yAxis = axisRight(yScale);
-    // svg
-    //   .select(".y-axis")
-    //   .style("transform", "translateX(300px)")
-    //   .call(yAxis);
-
-    // generates the "d" attribute of a path element
     const myLine = line()
       .x((value, index) => xScale(index))
       .y(yScale)
       .curve(curveCardinal);
 
-    // renders path element, and attaches
-    // the "d" attribute from line generator above
     svg
       .selectAll(".line")
       .data([dataset])
@@ -114,7 +104,6 @@ export default function Line(props) {
 
     <svg style={{overflow: 'visible'}} ref={svgRef}>
         <g className="x-axis" />
-        {/* <g className="y-axis" /> */}
       </svg>
       <br />
       <br />

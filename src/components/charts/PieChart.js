@@ -11,28 +11,20 @@ function PieChart({ data }) {
   const height = 50
   const width = 50
 
-  // will be called initially and on every data change
   useEffect(() => {
     const svg = select(svgRef.current);
-    // arc takes instructions (objects with special properties, like startAngle, endAngle, etc.)
-    // and transforms them into "d" attributes for path elements
     const arcGenerator = arc()
       .innerRadius(45)
       .outerRadius(50);
 
-    // pie will transform data to instructions for arcGenerator
     const pieGenerator = pie()
       .value(d => d.score)
-      .sort(null); // makes sure data doesn't get sorted
+      .sort(null); 
 
-    // now transform data to instructions for arc()
     const instructions = pieGenerator(data);
 
-    // generate colorScale
-    // https://github.com/d3/d3-scale-chromatic
     const colorScale = scaleOrdinal(schemeBlues[3]);
 
-    // render slices (instructions)
     svg
       .selectAll(".slice")
       .data(instructions)
@@ -45,7 +37,6 @@ function PieChart({ data }) {
       )
       .transition()
       .attrTween("d", function(nextInstruction) {
-        // animation when changing data
         const interpolator = interpolate(this.lastInstruction, nextInstruction);
         this.lastInstruction = interpolator(1);
         return function(t) {
